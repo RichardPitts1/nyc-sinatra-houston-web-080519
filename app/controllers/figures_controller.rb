@@ -21,10 +21,10 @@ class FiguresController < ApplicationController
     erb :'figures/show'
   end
 
-#   delete '/figures/:id/delete' do
-#   @figure = Figure.find(params["id"])
-#   @figure.destroy
-#   erb :delete
-# end
+  delete '/figures/:id/delete' do
+  @newFigure = Figure.find(params["id"])
+  @newFigure.destroy
+  erb :'/figures/delete'
+  end
 
 end

@@ -21,5 +21,11 @@ class LandmarksController < ApplicationController
   erb :'landmarks/show'
   end
 
+  delete '/landmarks/:id/delete' do
+    @newLandmark = Landmark.find(params["id"])
+    @newLandmark.destroy
+    erb :'/landmarks/delete'
+  end
+
 
 end
