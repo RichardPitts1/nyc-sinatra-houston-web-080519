@@ -6,11 +6,6 @@ class LandmarksController < ApplicationController
     erb :'landmarks/index'
   end
 
-  post '/landmarks' do 
-    Landmark.create(name: params[:name])
-    erb :'landmarks/index'
-  end
-
   get '/landmark/newLandmark' do
     erb :'landmarks/newLandmark'
   end
@@ -25,4 +20,6 @@ class LandmarksController < ApplicationController
   @landmarks = Landmark.all
   erb :'landmarks/show'
   end
+
+  
 end
