@@ -13,13 +13,11 @@ class FiguresController < ApplicationController
     erb :'/figures/newFigure'
   end
 
-  post '/figures/show' do
+  post '/figure/show' do
     @newFigure = Figure.create({
       name: params[:name]
     })
-    erb :'figures/newFigure'
+    @figures = Figure.all
+    erb :'figures/show'
   end
-
-
-
 end

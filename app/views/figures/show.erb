@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Here are the Figures!</th>
+    <th>Badass People</th>
+  </tr>
+<table>
+
+
+<h1> <%= @newFigure.name %> </h1>
+
+
+<h1> <% @figures.each do |figure|  %> </h1>
+  <%= figure.name %> <br>
+  <% end %>
+
